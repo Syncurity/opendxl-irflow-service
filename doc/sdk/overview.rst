@@ -1,7 +1,7 @@
 Overview
 ========
 
-The Syncurity IR-Flow DXL Python service exposes access to interact with
+The `Syncurity IR-Flow <https://www.syncurity.net>`_  DXL Python service exposes access to interact with
 IR-Flow via the DXL fabric.
 
 The purpose of this service is to allow users to invoke IR-Flow remote commands via the DXL fabric.
