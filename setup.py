@@ -14,7 +14,7 @@ with open(os.path.join(CWD, "irflowservice", "_version.py")) as f:
 
 setup(
     # Package name:
-    name="irflowservice",
+    name="opendxl_irflow_service",
 
     # Version number:
     version=VERSION_INFO["__version__"],
