@@ -21,7 +21,7 @@ setup(
 
     # Package requirements
     install_requires=[
-        "requests",
+        "requests=2.20.0",
         "irflow_client>=1.5.6",
         "dxlbootstrap>=0.2.0",
         "dxlclient>=4.1.0.184"
@@ -37,7 +37,7 @@ setup(
     license="Apache 2.0",
 
     # Keywords
-    keywords=['security', 'syncurity', 'ir-flow', 'orchestration'],
+    keywords=['security', 'syncurity', 'ir-flow', 'orchestration', 'opendxl'],
 
     # Packages
     packages=[
