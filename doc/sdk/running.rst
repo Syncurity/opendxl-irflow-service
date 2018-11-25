@@ -9,7 +9,7 @@ executing the following command line:
         python -m irflowservice <configuration-directory>
 
     The ``<configuration-directory>`` argument must point to a directory containing the configuration files
-    required for the application (see :doc:`configuration`).
+    required for the application (see :doc:`configuration` ).
 
 For example:
 

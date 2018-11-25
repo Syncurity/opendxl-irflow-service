@@ -53,13 +53,15 @@ setup(
     # Details
     url="https://www.syncurity.net",
 
-    description="",
+    description="opendxl-syncurity-irflow-service",
 
     long_description=open('README').read(),
 
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7"
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
     ],
 )
