@@ -81,10 +81,10 @@ class IRFlowCreateAlertCallback(IRFlowBaseCallback):
         # http_res = requests.get("http://geoloc.opendxl.io/{0}/{1}".format(
         #     request_dict["format"], request_dict["host"]))
         # Invoke IR-Flow Create Alert web service
-        alert_resp = self.irfc.create_alert(alert_fields=request_dict,
-                                            description='DXL Testing',
-                                            incoming_field_group_name='DXLAlerts',
-                                            suppress_missing_field_warning=True)
+        alert_resp = self.irfc.create_alert(alert_fields=request_dict['fields'],
+                                            description=request_dict['description'],
+                                            incoming_field_group_name=request_dict['incoming_field_group_name'],
+                                            suppress_missing_field_warning=request_dict['suppress_missing_field_warning'])
         return alert_resp.json()
 
     def transform_dict(self, dict):
