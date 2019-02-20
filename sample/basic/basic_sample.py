@@ -30,6 +30,7 @@ with DxlClient(config) as client:
     # Send request that will trigger request callback 'irflow_service_create_alert'
     request_topic = "/syncurity/service/irflow_api/create_alert"
     req = Request(request_topic)
+
     # Create dictionary with host to lookup and response format
     req_dict = {"format": "json",
                 "fields": {
@@ -41,6 +42,7 @@ with DxlClient(config) as client:
                 "incoming_field_group_name": "DXLAlerts",
                 "suppress_missing_field_warning": True
                 }
+
     # Convert dictionary to JSON and set as DXL request payload
     MessageUtils.dict_to_json_payload(req, req_dict)
     # Fire Away
