@@ -14,7 +14,7 @@ with open(os.path.join(CWD, "dxlirflowservice", "_version.py")) as f:
 
 setup(
     # Package name:
-    name="dxl-irflow-service",
+    name="dxlirflowservice",
 
     # Version number:
     version=VERSION_INFO["__version__"],
@@ -53,7 +53,7 @@ setup(
     # Details
     url="https://www.syncurity.net",
 
-    description="dxl-syncurity-irflow-service",
+    description="dxlsyncurityirflowservice",
 
     long_description=open('README').read(),
 

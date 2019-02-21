@@ -12,6 +12,7 @@ from distutils.archive_util import make_archive
 # Run clean
 import clean
 
+
 def replace(file_path, pattern, subst):
     # Create temp file
     fh, abs_path = mkstemp()
@@ -24,6 +25,7 @@ def replace(file_path, pattern, subst):
     os.remove(file_path)
     # Move new file
     move(abs_path, file_path)
+
 
 print("Starting dist.\n")
 
@@ -110,8 +112,8 @@ copy_tree(DIST_DIRECTORY, DIST_RELEASE_DIR)
 print("\nRemoving build directory\n")
 remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "build"))
 
-print("\nRemoving dxl_irflow_wservice.egg-info\n")
-remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "dxl_irflow_service.egg-info"))
+print("\nRemoving dxl_irflow_service.egg-info\n")
+# remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "dxl_irflow_service.egg-info"))
 
 print("\nMaking dist zip\n")
 make_archive(DIST_RELEASE_DIR, "zip", DIST_DIRECTORY, RELEASE_NAME)
