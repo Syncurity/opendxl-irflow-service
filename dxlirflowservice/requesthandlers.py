@@ -22,7 +22,7 @@ class IRFlowBaseCallback(RequestCallback):
         :param app: The application this handler is associated with
         """
         super(IRFlowBaseCallback, self).__init__()
-        self.irfc = IRFlowClient(config_file='config/opendxlirflowservice.config')
+        self.irfc = IRFlowClient(config_file='config/dxlirflowservice.config')
         self._app = app
 
     def on_request(self, request):

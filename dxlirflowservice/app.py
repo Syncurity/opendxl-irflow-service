@@ -22,7 +22,7 @@ class IRFlowService(Application):
         :param config_dir: The location of the configuration files for the
             application
         """
-        super(IRFlowService, self).__init__(config_dir, "opendxlirflowservice.config")
+        super(IRFlowService, self).__init__(config_dir, "dxlirflowservice.config")
 
     @property
     def client(self):
@@ -35,7 +35,7 @@ class IRFlowService(Application):
     @property
     def config(self):
         """
-        The application configuration (as read from the "opendxlirflowservice.config" file)
+        The application configuration (as read from the "dxlirflowservice.config" file)
         """
         return self._config
 

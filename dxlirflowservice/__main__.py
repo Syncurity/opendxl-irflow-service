@@ -41,7 +41,7 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # Validate command line
 if len(sys.argv) != 2:
-    print("Usage: opendxlirflowservice <configuration files directory>")
+    print("Usage: dxlirflowservice <configuration files directory>")
     sys.exit(1)
 
 #
