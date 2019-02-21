@@ -1,4 +1,4 @@
-# IR-FLow Service
+# IR-Flow Service
 
 ## Overview
 
@@ -25,6 +25,6 @@ Open an Issue
 
 ## LICENSE
 
-Copyright 2018
+Copyright 2019
 
 Apache 2.0

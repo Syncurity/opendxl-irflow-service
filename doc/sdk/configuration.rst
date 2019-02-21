@@ -14,7 +14,7 @@ Application configuration directory:
 
         config/
             dxlclient.config
-            irflowservice.config
+            dxlirflowservice.config
             logging.config (optional)
 
 .. _dxl_client_config_file_label:
@@ -44,10 +44,10 @@ DXL Client Configuration File (dxlclient.config)
 
 .. _dxl_service_config_file_label:
 
-IR-FLow Service (irflowservice.config)
-----------------------------------------
+IR-FLow Service (dxlirflowservice.config)
+-----------------------------------------
 
-    The required ``irflowservice.config`` file is used to configure the application.
+    The required ``dxlirflowservice.config`` file is used to configure the application.
 
     The following is an example of a populated application configuration file:
 

@@ -9,12 +9,12 @@ setuptools.command.sdist.sdist.run = distutils.command.sdist.sdist.run
 
 VERSION_INFO = {}
 CWD = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(CWD, "irflowservice", "_version.py")) as f:
+with open(os.path.join(CWD, "dxlirflowservice", "_version.py")) as f:
     exec(f.read(), VERSION_INFO)
 
 setup(
     # Package name:
-    name="opendxl_irflow_service",
+    name="dxlirflowservice",
 
     # Version number:
     version=VERSION_INFO["__version__"],
@@ -41,19 +41,19 @@ setup(
 
     # Packages
     packages=[
-        "irflowservice",
-        "irflowservice._config",
-        "irflowservice._config.sample",
-        "irflowservice._config.app"],
+        "dxlirflowservice",
+        "dxlirflowservice._config",
+        "dxlirflowservice._config.sample",
+        "dxlirflowservice._config.app"],
 
     package_data={
-        "irflowservice._config.sample" : ['*'],
-        "irflowservice._config.app" : ['*']},
+        "dxlirflowservice._config.sample" : ['*'],
+        "dxlirflowservice._config.app" : ['*']},
 
     # Details
     url="https://www.syncurity.net",
 
-    description="opendxl-syncurity-irflow-service",
+    description="dxlsyncurityirflowservice",
 
     long_description=open('README').read(),
 

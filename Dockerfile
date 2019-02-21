@@ -21,11 +21,11 @@ RUN rm -rf /tmp/build
 # Run the application.
 #
 # NOTE: The configuration files for the application must be
-#       mapped to the path: /opt/irflowservice-config
+#       mapped to the path: /opt/dxlirflowservice-config
 #
 # For example, specify a "-v" argument to the run command
 # to mount a directory on the host as a data volume:
 #
-#   -v /host/dir/to/config:/opt/irflowservice-config
+#   -v /host/dir/to/config:/opt/dxlirflowservice-config
 #
 CMD ["python", "-m", "irflowservice", "/opt/irflowservice-config"]

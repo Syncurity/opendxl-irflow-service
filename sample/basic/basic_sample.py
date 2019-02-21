@@ -22,7 +22,6 @@ config = DxlClientConfig.create_dxl_config_from_file(CONFIG_FILE)
 
 # Create the client
 with DxlClient(config) as client:
-
     # Connect to the fabric
     client.connect()
 
@@ -31,11 +30,19 @@ with DxlClient(config) as client:
     # Send request that will trigger request callback 'irflow_service_create_alert'
     request_topic = "/syncurity/service/irflow_api/create_alert"
     req = Request(request_topic)
+
     # Create dictionary with host to lookup and response format
     req_dict = {"format": "json",
-                "sourceHostName": "irflow-test.syncurity.net",
-                "sourceAddress": "10.0.10.20",
-                "eventType": "openDXL fabric alert"}
+                "fields": {
+                    "sourceHostName": "irflow-test.syncurity.net",
+                    "sourceAddress": "10.0.10.20",
+                    "eventType": "openDXL fabric alert"
+                },
+                "description": "DXLAlerts",
+                "incoming_field_group_name": "DXLAlerts",
+                "suppress_missing_field_warning": True
+                }
+
     # Convert dictionary to JSON and set as DXL request payload
     MessageUtils.dict_to_json_payload(req, req_dict)
     # Fire Away
@@ -44,7 +51,7 @@ with DxlClient(config) as client:
         create_alert_response = json.loads(res.payload)
         print("Response for irflow_service_create_alert: \n"
               "Created IR-Flow Alert ID: '{0}'"
-              .format(create_alert_response['data']['alert']['id']))
+              .format(create_alert_response['id']))
     else:
         print("Error invoking service with topic '{0}': {1} ({2})".format(
             request_topic, res.error_message, res.error_code))

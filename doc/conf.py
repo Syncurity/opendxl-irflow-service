@@ -37,7 +37,7 @@ copyright = "2018"
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-VERSION = __import__('irflowservice').get_version()
+VERSION = __import__('dxlirflowservice').get_version()
 # The short X.Y version.
 version = VERSION
 # The full version, including alpha/beta/rc tags.
@@ -61,6 +61,6 @@ htmlhelp_basename = 'sphinxdoc'
 
 autoclass_content = 'both'
 
-modindex_common_prefix = ['irflowservice.']
+modindex_common_prefix = ['dxlirflowservice.']
 
 html_use_smartypants = False

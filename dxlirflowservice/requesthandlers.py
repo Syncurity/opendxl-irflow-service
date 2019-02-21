@@ -22,7 +22,7 @@ class IRFlowBaseCallback(RequestCallback):
         :param app: The application this handler is associated with
         """
         super(IRFlowBaseCallback, self).__init__()
-        self.irfc = IRFlowClient(config_file='config/irflowservice.config')
+        self.irfc = IRFlowClient(config_file='config/dxlirflowservice.config')
         self._app = app
 
     def on_request(self, request):
@@ -81,10 +81,11 @@ class IRFlowCreateAlertCallback(IRFlowBaseCallback):
         # http_res = requests.get("http://geoloc.opendxl.io/{0}/{1}".format(
         #     request_dict["format"], request_dict["host"]))
         # Invoke IR-Flow Create Alert web service
-        alert_resp = self.irfc.create_alert(alert_fields=request_dict,
-                                            description='DXL Testing',
-                                            incoming_field_group_name='DXLAlerts',
-                                            suppress_missing_field_warning=True)
+        alert_resp = self.irfc.create_alert(alert_fields=request_dict['fields'],
+                                            description=request_dict['description'],
+                                            incoming_field_group_name=request_dict['incoming_field_group_name'],
+                                            suppress_missing_field_warning=request_dict[
+                                                'suppress_missing_field_warning'])
         return alert_resp.json()
 
     def transform_dict(self, dict):
@@ -93,7 +94,36 @@ class IRFlowCreateAlertCallback(IRFlowBaseCallback):
             'fact_group_id': dict['data']['alert']['fact_group_id'],
             'message': dict['message'],
             'score': dict['data']['alert']['score'],
-            'success': dict['success']
+            'success': dict['success'],
+            'id': dict['data']['alert']['id']
+        }
+
+
+class IRFlowCloseAlertCallback(IRFlowBaseCallback):
+    """
+    'irflow_service_close_alert' request handler registered with topic '/syncurity/service/irflow_api/create_alert'
+    """
+
+    def __init__(self, app):
+        """
+        Constructor parameters:
+
+        :param app: The application this handler is associated with
+        """
+        super(IRFlowCloseAlertCallback, self).__init__(app)
+
+    def invoke_service(self, request_dict):
+        # http_res = requests.get("http://geoloc.opendxl.io/{0}/{1}".format(
+        #     request_dict["format"], request_dict["host"]))
+        # Invoke IR-Flow Create Alert web service
+        response = self.irfc.close_alert(alert_num=request_dict['alert_num'],
+                                         close_reason=request_dict['close_reason'])
+        return response.json()
+
+    def transform_dict(self, dict):
+        return {
+            'success': dict['success'],
+            'message': dict['data']['close_reason_name']
         }
 
 
