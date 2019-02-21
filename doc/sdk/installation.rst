@@ -25,15 +25,15 @@ Use ``pip`` to automatically install the library:
 
     .. parsed-literal::
 
-        pip install irflowservice-\ |version|\-py2-none-any.whl
+        pip install dxldxlirflowservice-\ |version|\-py2-none-any.whl
 
 Or with:
 
     .. parsed-literal::
 
-        pip install irflowservice-\ |version|\.zip
+        pip install dxldxlirflowservice-\ |version|\.zip
 
-As an alternative (without PIP), unpack the irflowservice-\ |version|\.zip (located in the lib folder) and run the setup
+As an alternative (without PIP), unpack the dxldxlirflowservice-\ |version|\.zip (located in the lib folder) and run the setup
 script:
 
     .. parsed-literal::

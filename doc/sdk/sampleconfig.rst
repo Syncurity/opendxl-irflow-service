@@ -29,7 +29,7 @@ The following is an example of a populated configuration file:
 IR-Flow Service Configuration
 *****************************
 
-The "IR-Flow Service" also contains a configuration file calles (``irflowservice.config``) in the ``sample`` sub-directory that must be populated in order to connect to the IR-Flow API.
+The "IR-Flow Service" also contains a configuration file calles (``dxlirflowservice.config``) in the ``sample`` sub-directory that must be populated in order to connect to the IR-Flow API.
 
 The steps to populate this configuration are documented in in the `IR-FLow Python SDK`. See the `IR-FLow API <https://syncurity-irflow-sdk-python.readthedocs-hosted.com/en/latest/class.html#irflow_client.irflow_client.IRFlowClient._get_config_args_params>`_ docs for more information.
 

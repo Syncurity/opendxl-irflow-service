@@ -39,5 +39,5 @@ Python API
 .. toctree::
     :titlesonly:
 
-    irflowservice
+    dxlirflowservice
 
