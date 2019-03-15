@@ -66,7 +66,8 @@ class IRFlowBaseCallback(RequestCallback):
 
 class IRFlowCreateAlertCallback(IRFlowBaseCallback):
     """
-    'irflow_service_create_alert' request handler registered with topic '/syncurity/service/irflow_api/create_alert'
+    'irflow_service_create_alert' request handler registered with topic
+    '/open/threat/v1/orchestration/Syncurity/service/irflow_api/create_alert'
     """
 
     def __init__(self, app):
@@ -101,7 +102,8 @@ class IRFlowCreateAlertCallback(IRFlowBaseCallback):
 
 class IRFlowCloseAlertCallback(IRFlowBaseCallback):
     """
-    'irflow_service_close_alert' request handler registered with topic '/syncurity/service/irflow_api/create_alert'
+    'irflow_service_close_alert' request handler registered with topic
+    '/open/threat/v1/orchestration/Syncurity/service/irflow_api/close_alert'
     """
 
     def __init__(self, app):

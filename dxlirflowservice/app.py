@@ -69,18 +69,19 @@ class IRFlowService(Application):
         """
         # Register service 'irflow_api_service'
         logger.info("Registering service: %s", "irflow_api_service")
-        service = ServiceRegistrationInfo(self._dxl_client, "/syncurity/service/irflow_api")
+        service = ServiceRegistrationInfo(self._dxl_client,
+                                          "/open/threat/v1/orchestration/Syncurity/service/irflow_api")
 
         # Create Alert in IR-Flow
         logger.info("Registering request callback: %s", "irflow_service_create_alert")
         self.add_request_callback(service,
-                                  "/syncurity/service/irflow_api/create_alert",
+                                  "/open/threat/v1/orchestration/Syncurity/service/irflow_api/create_alert",
                                   IRFlowCreateAlertCallback(self),
                                   True)
         # Close Alert in IR-Flow
         logger.info("Registering request callback: %s", "irflow_service_close_alert")
         self.add_request_callback(service,
-                                  "/syncurity/service/irflow_api/close_alert",
+                                  "/open/threat/v1/orchestration/Syncurity/service/irflow_api/close_alert",
                                   IRFlowCloseAlertCallback(self),
                                   True)
 
