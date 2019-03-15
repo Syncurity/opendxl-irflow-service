@@ -25,12 +25,20 @@ invoking DXL client.
 Documentation
 -------------
 
-Clone this repo and run ``python dist.py``. Look in docs/ directory.
+Documentation
+-------------
+
+Documentation is supplied in the README links found after extracting the
+release.zip file on the releases page of this repo.
 
 Installation
 ------------
 
-Found in docs after running the above step.
+-  Download the Latest Release
+-  Extract the release .zip file
+-  View the README.html file located at the root of the extracted files.
+-  The README links to the documentation which includes installation
+   instructions, API details, and samples.
 
 Bugs and Feedback
 -----------------
