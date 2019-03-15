@@ -25,9 +25,6 @@ invoking DXL client.
 Documentation
 -------------
 
-Documentation
--------------
-
 Documentation is supplied in the README links found after extracting the
 release.zip file on the releases page of this repo.
 
