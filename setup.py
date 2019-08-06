@@ -55,7 +55,7 @@ setup(
 
     description="dxlsyncurityirflowservice",
 
-    long_description=open('README').read(),
+    long_description=open('README.rst').read(),
 
     classifiers=[
         "Programming Language :: Python",
